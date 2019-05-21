@@ -3,7 +3,7 @@
 <h2><%= link_to "Add a new task", tasks_new_path %></h2>
 
 <ol>
-  <% @tasks.each do |task| %>
+  <% @tasks.reverse.each do |task| %>
   <li><h3><%= link_to task.title, task_path(task) %></h3>
     <table>
       <tr>
