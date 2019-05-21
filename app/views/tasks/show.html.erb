@@ -1,0 +1,19 @@
+<h2><%= @task.title %></h2>
+
+<p><%= @task.details %></p>
+
+<p><em>Completed ?</em> <strong><%= @task.completed %></strong></p>
+
+<table>
+  <tr>
+    <td>Edit Task ?</td>
+    <td><%= link_to "Edit", edit_task_path %></td>
+  </tr>
+
+  <tr>
+    <td><p>Delete task ?</p></td>
+    <td><%= link_to "Yes", destroy_task_path(@task), method: :delete %></td>
+  </tr>
+</table>
+
+<%= link_to "It's time to go back, back, back...", tasks_path %>
